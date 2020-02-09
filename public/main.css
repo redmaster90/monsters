@@ -49,10 +49,12 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding: 10px;
     margin-left: 25%;
 }
 .create-title {
     margin-left: 25%;
+    margin-bottom: 10px;
 }
 .elem_select {
     display: flex;
@@ -109,7 +111,7 @@
     margin-right: 10px;
 }
 .atk-def-select input {
-    width: 30px;
+    width: 50px;
 }
 .atk-wrapper, .def-wrapper {
     display: flex;
@@ -124,6 +126,7 @@
 .monsters-wrapper {
     width: 50%;
     margin-left: 25%;
+    margin-top: 40px;
     font-family: 'Architects Daughter', sans-serif;
 }
 .monster-search-input {
@@ -136,8 +139,15 @@
     flex-direction: row;
     justify-content: space-between;
     border: 2px solid #501d1d;
+    border-top: 0;
     padding: 20px;
+}
+.monster-wrapper:first-of-type {
     margin-top: 20px;
+    border-top: 2px solid #501d1d;
+}
+.monsters-wrapper {
+    padding-bottom: 20px;
 }
 .monsters-wrapper .first-group {
     display: flex;
@@ -152,6 +162,10 @@
     flex-direction: column;
     align-self: center;
     margin-left: 20px;
+}
+.monster-name {
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 .attr-wrapper {
     display: flex;
@@ -170,4 +184,10 @@
 .delete-monster img {
     width: 50px;
     margin-top: 10px;
+}
+.delete-monster img:hover {
+    cursor: pointer;
+}
+.searchResultsCount {
+    color: #9e9e9e;    
 }

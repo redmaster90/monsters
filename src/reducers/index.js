@@ -1,10 +1,30 @@
 import { combineReducers } from 'redux';
-
+var testMonsters = [
+    {
+        name: 'tet1',
+        element: 2,
+        atk: 5,
+        def: 3
+    },
+    {
+        name: 'testtest2',
+        element: 0,
+        atk: 23,
+        def: 12
+    },
+    {
+        name: 'test1looonglonglonglonglongevenmuchmorelooonger',
+        element: 3,
+        atk: 5,
+        def: 3
+    }
+]
 const monsterReducer = (monsters = [], action) => {
     if (action.type === "CREATE_MONSTER") {
         return [...monsters, action.payload]
     }
     if (action.type === "DELETE_MONSTER") {
+        console.log(monsters)
         return monsters.filter(ms => ms.id !== parseInt(action.payload));
     }
     return monsters

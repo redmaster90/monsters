@@ -40,10 +40,7 @@ class CreateMonster extends Component {
         var name = document.getElementById('new_name_input').value;
         var atk = document.getElementById('atk_input').value;
         var def = document.getElementById('def_input').value;
-        var id = 0;
-        if (!this.props.monsters.length === 0) {
-            id = this.props.monsters[this.props.monsters.length - 1].id + 1;
-        }
+      
         if (name.length === 0 || atk.length === 0 || def.length === 0) {
             if (name.length === 0) {
                 alert('You must provide a name!')
@@ -55,7 +52,12 @@ class CreateMonster extends Component {
                 alert('You must provide a defense value!')
             }
         } else {
-            monster = { element, name, atk, def, id }
+            monster = { element, name, atk, def }
+            if (this.props.monsters.length === 0) {
+                monster.id = 0;
+            } else {
+                monster.id = this.props.monsters[this.props.monsters.length - 1].id + 1;
+            }
             this.props.createMonster(monster)
         }
     }
