@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 var testMonsters = [
     {
-        name: 'tet1',
+        name: 'test1',
         element: 2,
         atk: 5,
         def: 3
@@ -13,7 +13,7 @@ var testMonsters = [
         def: 12
     },
     {
-        name: 'test1looonglonglonglonglongevenmuchmorelooonger',
+        name: 'test1looonglonglonglonglongevenmuchmuchlooonger',
         element: 3,
         atk: 5,
         def: 3
